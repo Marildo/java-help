@@ -1,6 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
-  <display-name>jsp-primefaces</display-name>
+# JSF com primefaces
+
+ 1. New project mavem,  arquitetura simples
+ 2.  Properties ->  project facets (Dynamic web module, java, java scritp, JavaServer Faces, JPA)
+ 3. Config web.xml 
   <welcome-file-list>
   	<welcome-file>index.xhtml</welcome-file>
   </welcome-file-list>
@@ -13,4 +15,7 @@
     <servlet-name>Faces Servlet</servlet-name>
     <url-pattern>*.xhtml</url-pattern>
   </servlet-mapping>
-</web-app>
+  
+ 4.  add dependencies
+ - <!-- https://mvnrepository.com/artifact/com.sun.faces/jsf-impl -->
+ - <!-- https://mvnrepository.com/artifact/com.sun.faces/jsf-api -->

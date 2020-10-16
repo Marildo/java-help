@@ -20,7 +20,6 @@
 			<groupId>com.sun.faces</groupId>
 			<artifactId>jsf-api</artifactId>
 			<version>2.2.20</version>
-		</dependency>
-
+		</dependency>		
 	</dependencies>
 </project>
