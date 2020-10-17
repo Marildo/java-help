@@ -9,12 +9,12 @@ import java.time.LocalDateTime;
 
 @ManagedBean
 @ViewScoped
-public class ClienteBean implements Serializable{
+public class IndexBean implements Serializable{
 
 	private static final long serialVersionUID = 1L;
-	private String message = "Cadastro de clientes "+LocalDateTime.now();
+	private String message = "Tela App "+LocalDateTime.now();
 	
-	public ClienteBean() {
+	public IndexBean() {
 	   System.out.println(message);
 	}
 	

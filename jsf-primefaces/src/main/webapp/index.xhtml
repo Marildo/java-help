@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+	xmlns:h="http://xmlns.jcp.org/jsf/html">
 <h:body>
-	<h1>Hello JSF</h1> 
+	<h1>JSP Com Primefaces</h1>
 	<h:form>
-		<h:outputLabel value="#{clienteBean.message}" />
+		<h:outputLabel value="#{indexBean.message}" />
+		<br></br>
+		<h:panelGrid columns="2">
+			<h:commandButton action="clientes" value="Cadastro de clientes" />
+			<h:commandButton action="produtos" value="Cadastro de Produtos" />
+		</h:panelGrid>
 	</h:form>
 </h:body>
 </html>
