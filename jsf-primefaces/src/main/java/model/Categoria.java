@@ -1,51 +1,32 @@
 package model;
 
-import java.io.Serializable;
-import java.util.Set;
+import java.util.List;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+@SuppressWarnings("serial")
 @Entity
-public class Categoria implements Serializable{
-
-	private static final long serialVersionUID = 544852142707290648L;
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Integer id;
+public class Categoria extends AbstractEntity<Integer>{
 	
 	private String nome;
 	
-	@OneToMany
-	private Set<Produto> produtos;
-
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
-	public String getNome() {
-		return nome;
-	}
+	@OneToMany(mappedBy = "categoria")
+	private List<Produto> produtos;
 
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+	
+	public String getNome() {
+		return nome;
+	}
 
-	public Set<Produto> getProdutos() {
+	public List<Produto> getProdutos() {
 		return produtos;
 	}
 
-	public void setProdutos(Set<Produto> produtos) {
+	public void setProdutos(List<Produto> produtos) {
 		this.produtos = produtos;
 	}
-	
-	
 }

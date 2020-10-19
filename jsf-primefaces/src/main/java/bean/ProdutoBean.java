@@ -1,13 +1,14 @@
 package bean;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 
 import model.Categoria;
 import model.Produto;
-import model.repository.ProdutoRepository;
+import model.dao.ProdutoDao;
 
 @ManagedBean
 @ViewScoped
@@ -33,10 +34,21 @@ public class ProdutoBean implements Serializable {
 		Produto produto = new Produto();
 		produto.setNome("Produto 03");
 		produto.setValor(24.0);
+		produto.setCategoria(categoria);
 
-		ProdutoRepository repository = new ProdutoRepository();
-		repository.save(produto);
+	
+		ProdutoDao dao = new ProdutoDao();
+		produto = dao.salvar(produto);
+		System.out.println(produto);
 
 		return "";
+	}
+	
+	public String list() {		
+		ProdutoDao dao = new ProdutoDao();
+		List<Produto> produtos =   dao.findAll();
+		System.out.println(produtos);
+		
+		return null;		
 	}
 }

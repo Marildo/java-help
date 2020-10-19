@@ -1,10 +1,10 @@
-package model.repository;
+package model.dao;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
- class ProviderEntityManager {
+public class ProviderEntityManager {
 	
 	private static ProviderEntityManager instance;
 	
