@@ -1,14 +1,15 @@
 package model.dao;
 
 import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
 import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 
-import model.AbstractEntity;
+import model.entity.AbstractEntity;
 
-public class GenericDao<E extends AbstractEntity<?>> {
+public abstract class GenericDao<E extends AbstractEntity<?>> {
 
 	protected EntityManager entityManager;
 
@@ -27,11 +28,13 @@ public class GenericDao<E extends AbstractEntity<?>> {
 
 	public List<E> findAll() {
 		final String tableName = getClassType().getSimpleName();
-		return (List<E>) entityManager.createQuery("from " + tableName).getResultList();
+		final List<?> result = entityManager.createQuery("from " + tableName).getResultList();
+		return (List<E>) result;
 	}
 
 	private Class<E> getClassType() {
-		ParameterizedType parameterizedType = (ParameterizedType) this.getClass().getGenericSuperclass();
-		return (Class<E>) parameterizedType.getActualTypeArguments()[0];
-	}	
+		final ParameterizedType parameterizedType = (ParameterizedType) this.getClass().getGenericSuperclass();
+		Type result = parameterizedType.getActualTypeArguments()[0];
+		return (Class<E>) result;
+	}
 }

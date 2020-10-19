@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">
+<head>
+<title>Login</title>
+</head>
+<h:body>
+	<H1>Login</H1>
+
+	<h:form>
+		<h:panelGrid columns="2">
+			<h:commandButton action="#{usuarioBean.newUser}" value="Novo usuario" />
+			<h:commandButton action="#{usuarioBean.login}" value="Login" />
+		</h:panelGrid>
+	</h:form>
+</h:body>
+</html>

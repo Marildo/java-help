@@ -1,10 +1,10 @@
 package model.dao;
 
-import model.Produto;
+import model.entity.Produto;
 
 public class ProdutoDao extends GenericDao<Produto> {
 
-	 public ProdutoDao() {
+    public ProdutoDao() {
 		 entityManager = ProviderEntityManager.getInstance().getEntityManager();
 	}
 }

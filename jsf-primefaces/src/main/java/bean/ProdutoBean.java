@@ -6,9 +6,9 @@ import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 
-import model.Categoria;
-import model.Produto;
 import model.dao.ProdutoDao;
+import model.entity.Categoria;
+import model.entity.Produto;
 
 @ManagedBean
 @ViewScoped
@@ -27,7 +27,6 @@ public class ProdutoBean implements Serializable {
 	}
 
 	public String saveProduto() {
-
 		Categoria categoria = new Categoria();
 		categoria.setId(1);
 

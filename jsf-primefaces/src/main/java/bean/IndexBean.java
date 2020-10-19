@@ -4,6 +4,9 @@ import java.io.Serializable;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
+
+import service.LoginService;
+
 import java.time.LocalDateTime;
 
 
@@ -26,4 +29,8 @@ public class IndexBean implements Serializable{
 		this.message = message;
 	}
 	
+	public String logout() {
+		LoginService service = new LoginService();
+		return service.logout();		
+	}	
 }

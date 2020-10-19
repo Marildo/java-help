@@ -6,9 +6,10 @@
 	<h:form>
 		<h:outputLabel value="#{indexBean.message}" />
 		<br></br>
-		<h:panelGrid columns="2">
+		<h:panelGrid columns="3">
 			<h:commandButton action="clientes" value="Cadastro de clientes" />
 			<h:commandButton action="produtos" value="Cadastro de Produtos" />
+				<h:commandButton action="#{indexBean.logout()}" value="Logout" />
 		</h:panelGrid>
 	</h:form>
 </h:body>
