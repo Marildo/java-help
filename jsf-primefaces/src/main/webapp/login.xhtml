@@ -1,17 +1,52 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:h="http://xmlns.jcp.org/jsf/html">
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
 <head>
 <title>Login</title>
 </head>
 <h:body>
-	<H1>Login</H1>
+	<p:fieldset legend="Login">
+		<h:form>
+			<h:panelGrid columns="2" cellpadding="20">
+				<h:panelGrid columns="2" border="1" cellpadding="10">
+					<f:facet name="header">
+						<h:outputText value="Login " />
+					</f:facet>
 
-	<h:form>
-		<h:panelGrid columns="2">
-			<h:commandButton action="#{usuarioBean.newUser}" value="Novo usuario" />
-			<h:commandButton action="#{usuarioBean.login}" value="Login" />
-		</h:panelGrid>
-	</h:form>
+					<h:outputText value="Usuario " />
+					<p:inputText id="usuario" value="#{usuarioBean.usuario}" />
+
+
+					<h:outputText value="Senha " />
+					<p:password id="senha" value="#{usuarioBean.senha}" />
+
+					<f:facet name="footer">
+						<h:commandButton action="#{usuarioBean.login}" value="Login"
+							style="width: 100%" />
+					</f:facet>
+				</h:panelGrid>
+
+				<h:panelGrid columns="2" border="1" cellpadding="10">
+					<f:facet name="header">
+						<h:outputText value="Novo Usuário " />
+					</f:facet>
+
+					<h:outputText value="Usuario " />
+					<p:inputText value="#{usuarioBean.usuario}" />
+
+
+					<h:outputText value="Senha " />
+					<p:password value="#{usuarioBean.senha}" />
+
+					<f:facet name="footer">
+						<h:commandButton action="#{usuarioBean.newUser}" value="Cadastrar"
+							style="width: 100%" />
+					</f:facet>
+				</h:panelGrid>
+			</h:panelGrid>
+		</h:form>
+	</p:fieldset>
 </h:body>
 </html>

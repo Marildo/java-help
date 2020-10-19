@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:h="http://xmlns.jcp.org/jsf/html">
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
 <h:body>
 	<h1>JSP Com Primefaces</h1>
 	<h:form>
@@ -9,7 +10,7 @@
 		<h:panelGrid columns="3">
 			<h:commandButton action="clientes" value="Cadastro de clientes" />
 			<h:commandButton action="produtos" value="Cadastro de Produtos" />
-				<h:commandButton action="#{indexBean.logout()}" value="Logout" />
+			<h:commandButton action="#{indexBean.logout}" value="Logout" />
 		</h:panelGrid>
 	</h:form>
 </h:body>

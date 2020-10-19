@@ -2,6 +2,7 @@ package bean;
 
 import java.io.Serializable;
 import java.util.Optional;
+import java.util.logging.Logger;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
@@ -16,11 +17,11 @@ public class UsuarioBean implements Serializable {
 
 	private static final long serialVersionUID = -9162222995892286784L;
 
+	private String usuario;
+	private String senha;
+
 	public String login() {
-
-		String senha = "123456";
-		String usuario = "admin";
-
+		// Logger.getLogger(getClass().getName()).info(usuario+" :: "+senha);
 		UsuarioDao dao = new UsuarioDao();
 		Optional<Usuario> user = dao.findByLogin(usuario, senha);
 		if (user.isPresent()) {
@@ -32,13 +33,29 @@ public class UsuarioBean implements Serializable {
 
 	public String newUser() {
 		Usuario user = new Usuario();
-		user.setSenha("123456");
-		user.setUsuario("admin");
+		user.setSenha(senha);
+		user.setUsuario(usuario);
 
 		UsuarioDao dao = new UsuarioDao();
 		user = dao.salvar(user);
 		LoginService service = new LoginService();
+		Logger.getLogger(getClass().getName()).info(user.toString());
 		return service.login(user);
 	}
 
+	public String getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
+	}
+
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
 }

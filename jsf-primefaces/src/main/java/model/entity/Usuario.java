@@ -26,5 +26,10 @@ public class Usuario extends AbstractEntity<Integer>{
 
 	public void setSenha(String senha) {
 		this.senha = senha;
+	}
+
+	@Override
+	public String toString() {
+		return "Usuario [usuario=" + usuario + ", senha=" + senha + "]";
 	}	
 }
