@@ -1,4 +1,4 @@
-package model.dao;
+package model.dao.implementation;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
