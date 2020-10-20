@@ -15,13 +15,13 @@ import service.LoginService;
 @ViewScoped
 public class UsuarioBean implements Serializable {
 
-	private static final long serialVersionUID = -9162222995892286784L;
+	private static final long serialVersionUID = 1l;
 
-	private String usuario;
+	private String usuario ;
 	private String senha;
 
 	public String login() {
-		// Logger.getLogger(getClass().getName()).info(usuario+" :: "+senha);
+		// Logger.getLogger(getClass().getName()).info(usuario + " :: " + senha);
 		UsuarioDao dao = new UsuarioDao();
 		Optional<Usuario> user = dao.findByLogin(usuario, senha);
 		if (user.isPresent()) {

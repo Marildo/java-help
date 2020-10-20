@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<head>
+<title>JSF Com Primefaces</title>
+</head>
+<h:body>
+	<header style="border-width: 1px; border-style: solid; height: 25%">
+		<ui:insert name="header">
+			<ui:include src="/templates/header.xhtml"></ui:include>
+		</ui:insert>
+	</header>
+
+	<aside style="width: 20%; float: left;">
+		<ui:insert name="menu">
+			<ui:include src="/templates/menu.xhtml"></ui:include>
+		</ui:insert>
+	</aside>
+
+	<section style="width: 80%; float: right;">
+		<ui:insert name="content">
+
+		</ui:insert>
+	</section>
+
+	<footer style="position: absolute; bottom: 0;">
+		<ui:insert name="footer">@Tela Sistemas</ui:insert>
+	</footer>
+
+</h:body>
+</html>

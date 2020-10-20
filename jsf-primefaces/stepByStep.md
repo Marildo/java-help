@@ -21,3 +21,5 @@
  4.  add dependencies em pom.xml
  
  5. Project Properties --> Deployment Assembly, add Java Build Path Entries
+ 
+ * https://examples.javacodegeeks.com/enterprise-java/jsf/jsf-facelets-templates-example/

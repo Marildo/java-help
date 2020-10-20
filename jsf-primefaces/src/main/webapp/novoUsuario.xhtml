@@ -4,13 +4,13 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:p="http://primefaces.org/ui">
 <head>
-<title>Login</title>
+<title>Cadastro de usuario</title>
 </head>
 <h:body>
 	<h:form>
 		<h:panelGrid columns="2" border="1" cellpadding="10">
 			<f:facet name="header">
-				<h:outputText value="Login " />
+				<h:outputText value="Cadastro de usuario " />
 			</f:facet>
 
 			<h:outputText value="Usuario " />
@@ -20,10 +20,8 @@
 			<p:password id="senha" value="#{usuarioBean.senha}" />
 
 			<f:facet name="footer">
-				<h:commandButton action="novoUsuario" value="Cadastrar-se"
-					style="width: 50%; height:40px" />
-				<h:commandButton action="#{usuarioBean.login}" value="Login"
-					style="width: 50%; height:40px" />
+				<h:commandButton action="#{usuarioBean.newUser}" value="Salvar"
+					style="width: 100%; height:40px" />
 			</f:facet>
 		</h:panelGrid>
 	</h:form>

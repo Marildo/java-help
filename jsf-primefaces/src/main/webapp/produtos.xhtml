@@ -1,14 +1,14 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
-<h:body>
-	<h1>Cadastro de Produtos</h1> 
-	<h:form>
-		<h:outputLabel value="#{produtoBean.header}" />
-		
-		<h:commandButton value="Salvar" action="#{produtoBean.saveProduto}"/>
-		
-				<h:commandButton value="Carregar" action="#{produtoBean.list}"/>
-	</h:form>
-</h:body>
-</html>
+<ui:composition template="templates/main.xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">
+	<ui:define name="content">
+		<h1>Cadastro de Produtos</h1>
+		<h:form>
+			<h:outputLabel value="#{produtoBean.header}" />
+
+			<h:commandButton value="Salvar" action="#{produtoBean.saveProduto}" />
+
+			<h:commandButton value="Carregar" action="#{produtoBean.list}" />
+		</h:form>
+	</ui:define>
+</ui:composition>

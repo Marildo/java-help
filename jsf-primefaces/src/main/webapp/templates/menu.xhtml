@@ -1,0 +1,13 @@
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core">
+	<h:form>
+		<h:panelGrid columns="1">
+			<h:commandButton action="clientes" value="Cadastro de clientes" />
+			<h:commandButton action="produtos" value="Cadastro de Produtos" />
+			<h:commandButton action="#{indexBean.logout}" value="Logout" />
+		</h:panelGrid>
+	</h:form>
+</ui:composition>
