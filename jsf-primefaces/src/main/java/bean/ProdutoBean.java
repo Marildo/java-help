@@ -20,6 +20,7 @@ public class ProdutoBean implements Serializable {
 	private final String header = "Cadastro de Produtos";
 	
 	private ProdutoDao produtoDao;
+	private List<Produto> produtos;
 
 	public ProdutoBean() {
 		System.out.println("Cadastro de Produto");
@@ -48,9 +49,11 @@ public class ProdutoBean implements Serializable {
 	
 	public String list() {		
 		ProdutoDao dao = new ProdutoDaoImp();
-		List<Produto> produtos =   dao.findAll();
-		System.out.println(produtos);
-		
+		 produtos =   dao.findAll();		
 		return null;		
+	}
+	
+	public List<Produto> getProdutos() {
+		return produtos;
 	}
 }
