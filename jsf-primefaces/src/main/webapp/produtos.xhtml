@@ -5,9 +5,9 @@ xmlns:p="http://primefaces.org/ui">
 	<ui:define name="content">
 		<h1><h:outputLabel value="#{produtoBean.header}" /></h1>
 		<h:form>
-			<h:commandButton value="Salvar" action="#{produtoBean.saveProduto}" />
-
+			<h:commandButton value="Salvar" action="#{produtoBean.saveProduto}" />            
 			<h:commandButton value="Carregar" action="#{produtoBean.list}" />
+			<h:commandButton value="Listagem" action="#{produtoBean.gerarListagem}" />
 
 			<p:dataTable var="produto" value="#{produtoBean.produtos}" style="border: 1px solid blue">
 				<p:column headerText="Id">
