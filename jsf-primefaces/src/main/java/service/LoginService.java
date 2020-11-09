@@ -15,6 +15,8 @@ public class LoginService {
 	public String logout() {
 		FacesContext context = FacesContext.getCurrentInstance();
 		context.getExternalContext().getSessionMap().remove("usuarioLogado");
+		HttpServletRequest request = (HttpServletRequest) context.getExternalContext().getRequest();
+		request.getSession().invalidate();
 		return "login.xhtml";
 	}
 }
