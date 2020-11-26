@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="paneMain" prefHeight="150.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.tela.MasterController">
+   <children>
+      <Button layoutX="14.0" layoutY="47.0" mnemonicParsing="false" onAction="#onTaksOne" prefHeight="42.0" prefWidth="129.0" text="Task 1" />
+      <Button layoutX="157.0" layoutY="47.0" mnemonicParsing="false" onAction="#onBuscaCep" prefHeight="42.0" prefWidth="129.0" text="Busca CEP" />
+   </children>
+</AnchorPane>
