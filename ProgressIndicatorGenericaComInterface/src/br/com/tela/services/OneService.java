@@ -5,7 +5,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
  * @author Marildo Cesar 26/11/2020
  */
 public class OneService extends ProgressServiceImpl {

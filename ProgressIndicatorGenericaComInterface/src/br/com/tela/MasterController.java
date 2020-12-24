@@ -25,8 +25,8 @@ public class MasterController implements Initializable {
     private AnchorPane paneMain;
 
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+    public void initialize(URL location, ResourceBundle resources) {
+
     }
 
     @FXML

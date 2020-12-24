@@ -3,3 +3,23 @@
 /jsf-primefaces/target/
 jsf-primefaces/.settings/*
  
+/JavaFXApplication3/nbproject/private/
+/JavaFXApplication3/dist/
+/JavaFXApplication3/build/
+/Test_ProgressBarComObserver/nbproject/private/
+/Test_ProgressBarComObserver/build/
+/Test_ProgressBarComObserver/dist/
+/ProgressBarComObserver/nbproject/private/
+/ProgressBarComObserver/dist/
+/ProgressBarComObserver/build/
+/ProgressIndicatorGenericaComInterface/nbproject/private/
+/ProgressIndicatorGenericaComInterface/dist/
+/ProgressIndicatorGenericaComInterface/build/
+/JavaFXPreloader1/nbproject/private/
+/JavaFXApplication6/nbproject/private/
+/JavaFXApplication7/nbproject/private/
+/JavaFXApplication7-Preloader/nbproject/private/
+/JavaFXApplication7-Preloader/build/
+/JavaFXApplication7-Preloader/dist/
+/JavaFXApplication7/build/
+/JavaFXApplication7/dist/

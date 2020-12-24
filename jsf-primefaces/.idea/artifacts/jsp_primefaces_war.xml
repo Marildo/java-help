@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="jsp-primefaces:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>jsp-primefaces</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="jsp-primefaces-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="jsp-primefaces:war exploded" />
+    </root>
+  </artifact>
+</component>

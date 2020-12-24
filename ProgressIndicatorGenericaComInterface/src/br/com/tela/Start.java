@@ -7,17 +7,16 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
- *
  * @author MCesar
  */
 public class Start extends Application {
-    
+
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("Master.fxml"));
-        
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Master.fxml"));
+        Parent root = loader.load();
+
         Scene scene = new Scene(root);
-        
         stage.setScene(scene);
         stage.show();
     }
@@ -25,5 +24,4 @@ public class Start extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-    
 }

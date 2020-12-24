@@ -16,8 +16,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 
 /**
- * FXML Controller class
- *
  * @author MCesar
  */
 public class ViaCEPController implements Initializable, Observer {
@@ -31,7 +29,7 @@ public class ViaCEPController implements Initializable, Observer {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+
     }
 
     @FXML

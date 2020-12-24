@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" fx:id="paneMain" prefHeight="150.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.tela.MasterController">
+<AnchorPane id="AnchorPane" fx:id="paneMain" prefHeight="150.0" prefWidth="300.0" style="-fx-background-color: #E3E355;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.tela.MasterController">
    <children>
-      <Button layoutX="14.0" layoutY="47.0" mnemonicParsing="false" onAction="#onTaksOne" prefHeight="42.0" prefWidth="129.0" text="Task 1" />
-      <Button layoutX="157.0" layoutY="47.0" mnemonicParsing="false" onAction="#onBuscaCep" prefHeight="42.0" prefWidth="129.0" text="Busca CEP" />
+      <Button layoutX="14.0" layoutY="47.0" mnemonicParsing="false" onAction="#onTaksOne" prefHeight="42.0" prefWidth="129.0" text="Task 1">
+         <effect>
+            <DropShadow />
+         </effect></Button>
+      <Button layoutX="157.0" layoutY="47.0" mnemonicParsing="false" onAction="#onBuscaCep" prefHeight="42.0" prefWidth="129.0" text="Busca CEP">
+         <effect>
+            <DropShadow />
+         </effect></Button>
    </children>
+   <effect>
+      <DropShadow height="14.95" radius="10.71" width="29.89" />
+   </effect>
 </AnchorPane>

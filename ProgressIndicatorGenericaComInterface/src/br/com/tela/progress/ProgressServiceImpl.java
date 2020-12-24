@@ -3,7 +3,6 @@ package br.com.tela.progress;
 import java.util.Observable;
 
 /**
- *
  * @author MCesar
  */
 public abstract class ProgressServiceImpl extends Observable implements ProgressService {

@@ -1,7 +1,6 @@
 package br.com.tela.progress;
 
 /**
- *
  * @author MCesar
  */
 public interface ProgressService {
